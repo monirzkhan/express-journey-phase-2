@@ -1,7 +1,13 @@
 import app from "./app";
 import { config } from "./config";
+import { initDB } from "./db";
 
 
-app.listen(config.port,()=>{
+const main =()=>{
+    initDB()
+    app.listen(config.port,()=>{
     console.log(`server is running form port: ${config.port}`);
 })
+}
+
+main()

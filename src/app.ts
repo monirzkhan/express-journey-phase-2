@@ -1,4 +1,5 @@
 import express from 'express'
+import { userRoute } from './modules/user/user.route';
 
 const app=express();
 
@@ -12,5 +13,7 @@ app.get('/',(req, res)=>{
 
     })
 })
+
+app.use('/api/users',userRoute )
 
 export default app

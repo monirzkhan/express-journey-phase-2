@@ -6,5 +6,6 @@ dotenv.config({
 })
 
 export const config={
-    port: process.env.PORT
+    port: process.env.PORT,
+    database_URL: process.env.DATABASE_URL
 }
